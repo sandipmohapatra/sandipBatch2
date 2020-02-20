@@ -30,33 +30,7 @@ BEGIN
 
 select * from users;
 -----------------------------------------------------------------
-    create or replace procedure testproc(p_str1 in varchar, p_str2 out varchar, p_str3 in out varchar) IS
-    BEGIN
-        DBMS_OUTPUT.PUT_LINE('p_str1 = ' || p_str1);
-         DBMS_OUTPUT.PUT_LINE('p_str2 = ' || p_str2);
-          DBMS_OUTPUT.PUT_LINE('p_str3 = ' || p_str3);
-           
-           p_str2 := 'welcome ' || p_str1;
-           p_str3 := 'welcome to ' || p_str3;
-    END;
-    
-    DECLARE
-        S1 VARCHAR(40);
-        S2 VARCHAR(40);
-        S3 VARCHAR(40);
-        
-    BEGIN
-        S1 := 'AMIT';
-        S2 := 'BANGALORE';
-        S3 := 'MPHASIS';
-        
-    testproc(s1,s2,s3);
-        DBMS_OUTPUT.PUT_LINE('----------------------------------------------');
-        DBMS_OUTPUT.PUT_LINE('s1 : ' || s1);
-        DBMS_OUTPUT.PUT_LINE('s2 : ' || s2);
-        DBMS_OUTPUT.PUT_LINE('s3 : ' || s3);
-    END;
-        
+   
 -----------------------------------------------------------------------------
 
 create or replace procedure add_number(i number default 0,j number default 0,k number default 0) is
